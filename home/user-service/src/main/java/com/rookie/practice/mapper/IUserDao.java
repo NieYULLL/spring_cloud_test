@@ -20,5 +20,7 @@ public interface IUserDao {
     SysUserInfo getUserById(@Param("id") Integer id);
 
     int updateUserById(@Param("user") SysUserInfo userInfo);
+    int deleteUserById(@Param("id") Integer id);
+
 
 }

@@ -9,12 +9,19 @@
         <result column="userGuid" property="userGuid"/>
         <result column="username" property="username"/>
     </resultMap>
+
     <update id="updateUserById">
         update spring1_dev.sys_user_info user
         set user.login_name=#{user.loginName},
             user.username=#{user.userName}
         where user.id = #{user.id}
     </update>
+
+    <delete id="deleteUserById">
+        delete
+        from spring1_dev.sys_user_info
+        where id = #{id}
+    </delete>
     <select id="getUserById" resultMap="baseResultMap">
         select login_name as loginName,
                user_guid  as userGuid,
