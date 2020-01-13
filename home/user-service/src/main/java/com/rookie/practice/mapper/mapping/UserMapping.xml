@@ -2,8 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.rookie.practice.mapper.IUserDao">
 
-    <select id="getUserById" resultType="com.rookie.practice.entity.SysUserInfo">
-        select *
+    <resultMap id="baseResultMap" type="com.rookie.practice.entity.SysUserInfo">
+        <id column="id" property="id"/>
+        <result column="loginName" property="loginName"/>
+        <result column="roleId" property="roleId"/>
+        <result column="userGuid" property="userGuid"/>
+        <result column="username" property="username"/>
+    </resultMap>
+    <select id="getUserById" resultMap="baseResultMap">
+        select login_name as loginName,
+               user_guid  as userGuid,
+               role_id    as roleId,
+               username   as username,
+               id         as id
         from spring1_dev.sys_user_info
         where id = #{id};
     </select>

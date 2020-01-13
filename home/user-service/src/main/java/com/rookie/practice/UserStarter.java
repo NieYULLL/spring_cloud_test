@@ -1,5 +1,9 @@
 package com.rookie.practice;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 /**
  * @Description: <br/>
  * @Copyright(c): 2020, Rookie <br/>
@@ -8,5 +12,10 @@ package com.rookie.practice;
  * @Author: Rookie-nie <br/>
  * @Version: 1.0
  */
+@EnableDiscoveryClient
+@SpringBootApplication
 public class UserStarter {
+    public static void main(String[] args) {
+            SpringApplication.run(UserStarter.class, args);
+    }
 }

@@ -1,5 +1,7 @@
 package com.rookie.practice.service;
 
+import com.rookie.practice.entity.SysUserInfo;
+
 /**
  * @Description: <br/>
  * @Copyright(c): 2020, Rookie <br/>
@@ -9,4 +11,6 @@ package com.rookie.practice.service;
  * @Version: 1.0
  */
 public interface IUserService {
+
+    SysUserInfo getUserById(Integer id);
 }

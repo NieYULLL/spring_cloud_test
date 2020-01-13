@@ -1,6 +1,9 @@
-package com.sample;
+package com.rookie.practice.entity;
 
 
+/**
+ * @author niezhiqiang
+ */
 public class SysUserInfo {
 
   private String loginName;
