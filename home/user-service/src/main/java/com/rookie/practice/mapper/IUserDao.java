@@ -17,5 +17,8 @@ import org.springframework.stereotype.Component;
 @Component("userDao")
 public interface IUserDao {
 
-    SysUserInfo getUserById(@Param("id")  Integer    id);
+    SysUserInfo getUserById(@Param("id") Integer id);
+
+    int updateUserById(@Param("user") SysUserInfo userInfo);
+
 }
