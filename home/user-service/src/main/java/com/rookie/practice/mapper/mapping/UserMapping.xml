@@ -9,6 +9,11 @@
         <result column="userGuid" property="userGuid"/>
         <result column="username" property="username"/>
     </resultMap>
+    <delete id="deleteUserById">
+        delete
+        from spring1_dev.sys_user_info
+        where id = #{id}
+    </delete>
     <select id="getUserById" resultMap="baseResultMap">
         select login_name as loginName,
                user_guid  as userGuid,
