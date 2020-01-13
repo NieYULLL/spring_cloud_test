@@ -18,6 +18,4 @@ import org.springframework.stereotype.Component;
 public interface IUserDao {
 
     SysUserInfo getUserById(@Param("id")  Integer    id);
-
-
 }
